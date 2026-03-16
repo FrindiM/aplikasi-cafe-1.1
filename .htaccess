@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Biarkan file & folder yang benar-benar ada diakses langsung
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Semua request lain arahkan ke index.php
+RewriteRule ^(.*)$ index.php [QSA,L]

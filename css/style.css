@@ -1,0 +1,68 @@
+:root {
+    --espresso:  #3B1F0E;
+    --darkroast: #6B3A2A;
+    --sienna:    #A0522D;
+    --caramel:   #C8855A;
+    --latte:     #DBA882;
+    --cream:     #EDD5B3;
+    --milkfoam:  #F5E6D0;
+    --offwhite:  #FBF5ED;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+    background-image: url('../img/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: #1a0f07;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+/* ── Hero ── */
+.hero {
+    height: 100vh;
+    background-color: rgba(27, 10, 3, 0.78);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+.sapaan { margin-bottom: 30px; }
+
+.hero .btnBuka {
+    border-radius: 12px;
+    font-family: "Permanent Marker", cursive;
+    padding: 16px 44px;
+    background-color: rgba(237, 213, 179, 0.12);
+    border: 2px solid rgba(237, 213, 179, 0.65);
+    color: var(--milkfoam);
+    font-size: 1.15rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    backdrop-filter: blur(4px);
+    letter-spacing: 1px;
+}
+.hero .btnBuka:hover {
+    background-color: rgba(237, 213, 179, 0.25);
+    border-color: var(--cream);
+    transform: translateY(-2px);
+}
+
+.hero h1, .hero h4, .hero p {
+    font-family: "Gloria Hallelujah", cursive;
+    color: var(--milkfoam);
+    text-shadow: 0 2px 12px rgba(0,0,0,0.6);
+}
+.hero h1 { font-size: clamp(1.6rem, 5vw, 3.2rem); margin-bottom: 10px; }
+.hero h4 { font-size: clamp(1rem, 3vw, 1.6rem); margin-bottom: 8px; color: var(--cream); }
+.hero p  { font-size: clamp(0.85rem, 2vw, 1rem); opacity: 0.8; }
+
+/* ── Section Menu (halaman publik) ── */
+.section {
+    display: none;
+    background-color: var(--offwhite);
+    min-height: 100vh;
+}
